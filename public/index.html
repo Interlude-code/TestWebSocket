@@ -32,7 +32,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script>
-        const socket = io('https://testing-reactsocket.herokuapp.com/');
+        const socket = io('http://localhost:5000/');
         
         const formulario = document.querySelector('#miFormulario')
         const mensajes   = document.querySelector('#mis-mensajes')
@@ -53,11 +53,6 @@
         })
 
 
-
-
-
-
-
         // socket.on('mensaje-de-bienvenida',(data)=>{
         //     console.log("algo se esta emitiendo : " ,data )
         // })
@@ -68,6 +63,8 @@
         //         nombre:'fernando'
         //     })   
         // },2000)
+
+        
 
     </script>
 </body>
