@@ -1,10 +1,15 @@
 import express from 'express';
 import { createServer } from 'http';
 import {Server} from 'socket.io'
-import Sockets from './socks.js';
+import Sockets from './socks';
+import Cors from 'cors';
 
 
 class ServerExpress{
+    app   : express
+    port  :String
+    server: any
+    io    : Server
 
     constructor(){
         this.app    = express()
@@ -15,6 +20,7 @@ class ServerExpress{
     
     middleware(){
         this.app.use(express.static('public'))
+        this.app.use(Cors())
         
     }
 

@@ -33,37 +33,11 @@
     
     <script>
         const socket = io('http://localhost:5000/');
-        
-        const formulario = document.querySelector('#miFormulario')
-        const mensajes   = document.querySelector('#mis-mensajes')
-        const txtMensaje = document.querySelector('#txtMsg')
- 
-        formulario.addEventListener('submit',(e)=>{
-            e.preventDefault()
-            const nuevoMensaje= txtMensaje.value
-            socket.emit('mensaje-to-server',{
-                msg:nuevoMensaje
-            })
+
+        socket.on('current-bands',data=>{
+            console.log(data)
         })
-
-        socket.on('mensaje-from-server',(data)=>{
-            console.log(data.data.msg);
-            mensajes.innerHTML += `<li>${data.data.msg}</li>`
         
-        })
-
-
-        // socket.on('mensaje-de-bienvenida',(data)=>{
-        //     console.log("algo se esta emitiendo : " ,data )
-        // })
-
-        // setTimeout(()=>{
-        //     socket.emit('mensaje-cliente',{
-        //         msg:'cliente',
-        //         nombre:'fernando'
-        //     })   
-        // },2000)
-
         
 
     </script>

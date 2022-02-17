@@ -1,4 +1,4 @@
-import ServerExpress from "./models/server.js";
+import ServerExpress from "./models/server";
 import dotenv from 'dotenv';
 
 dotenv.config({ path: '.env' });
