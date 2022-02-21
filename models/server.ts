@@ -19,7 +19,7 @@ class ServerExpress{
     }
     
     middleware(){
-        this.app.use(express.static('public'))
+        // this.app.use(express.static('public'))
         this.app.use(Cors())
         
     }

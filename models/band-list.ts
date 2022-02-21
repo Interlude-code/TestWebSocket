@@ -38,4 +38,14 @@ export default class BandList{
         })
     }
 
+    changeName(id,name){
+        this.bands = this.bands.map(band=>{
+            if(band.id===id){
+                band.name=name
+            }
+                
+            return band
+        })
+    }
+
 }
